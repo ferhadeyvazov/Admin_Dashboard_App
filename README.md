@@ -1,11 +1,15 @@
 # Complex Admin Dashboard App
+
+React+Typescript+MUI və bir çox texnologiyalarla yigilan bu sehife Admin idarəetmə, analiz işləri üçün nəzərdə tutulub. 
+İstifadə etdiyim texnologiyalar ətraflı aşağıda göstərilmişdir.
+
 ## Technologies
 
 #### Superset: [Typescript](https://www.typescriptlang.org/)
 
 #### Server build tool: [Vite](https://vite.dev/guide/)
 
-#### Style: [Material UI](https://mui.com/material-ui/getting-started/installation/)
+#### UI Library: [Material UI](https://mui.com/material-ui/getting-started/installation/)
 
 #### Data Table: [MUI Data Grid](https://mui.com/x/react-data-grid/getting-started/#installation)
 
@@ -17,7 +21,7 @@
 
 #### Forms : [React Hook Form](https://react-hook-form.com/)
 
-#### Validation : [Zod](https://zod.dev/)
+#### Form Validation : [Zod](https://zod.dev/)
 
 #### Calendar : [FullCalendar](https://fullcalendar.io/)
 
