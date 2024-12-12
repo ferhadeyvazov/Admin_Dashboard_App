@@ -1,7 +1,9 @@
-export const mockLineData = [
+import { ILineData } from "./type";
+
+export const mockLineData:ILineData[] = [
   {
     id: "japan",
-    color: tokens("dark").greenAccent[500],
+    color: "Tokenden gelen reng olacaq",
     data: [
       {
         x: "plane",
@@ -55,7 +57,7 @@ export const mockLineData = [
   },
   {
     id: "france",
-    color: tokens("dark").blueAccent[300],
+    color: "Tokenden gelen reng olacaq",
     data: [
       {
         x: "plane",
@@ -109,7 +111,7 @@ export const mockLineData = [
   },
   {
     id: "us",
-    color: tokens("dark").redAccent[200],
+    color: "Tokenden gelen reng olacaq",
     data: [
       {
         x: "plane",
