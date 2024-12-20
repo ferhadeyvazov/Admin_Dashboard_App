@@ -9,6 +9,8 @@ React+Typescript+MUI və bir çox texnologiyalarla yigilan bu sehife Admin idar�
 
 #### Server build tool: [Vite](https://vite.dev/guide/)
 
+#### State Management: [Redux Toolkit](https://redux-toolkit.js.org/)
+
 #### UI Library: [Material UI](https://mui.com/material-ui/getting-started/installation/)
 
 #### Style: [Module SCSS](https://sass-lang.com/)
