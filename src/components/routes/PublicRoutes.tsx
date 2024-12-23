@@ -8,14 +8,13 @@ import {
 } from 'react-router-dom'
 // Pages
 import Login from "../public/login/Login"
-import NotFound from '../../pages/notFound/NotFound'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/'>
             <Route index element={<Navigate to={"login"} />} />
             <Route path='login' element={<Login />} />
-            <Route path='*' element={<NotFound />} />
+            <Route path='*' element={<Navigate to={'login'} />} />
         </Route>
     )
 )

@@ -4,10 +4,13 @@ import PrivateRoutes from './PrivateRoutes'
 import PublicRoutes from './PublicRoutes'
 
 const Routes: React.FC = () => {
-    let fake_auth = import.meta.env.VITE_FAKE_AUTH;
+    let fake_auth = JSON.parse(import.meta.env.VITE_FAKE_AUTH);
+    console.log(typeof fake_auth);
     console.log(fake_auth);
-    <RenderIf condition={fake_auth} renderElse={<PrivateRoutes/>}>
-        <PublicRoutes />
-    </RenderIf>
+    return (
+        <RenderIf condition={fake_auth} renderElse={<PublicRoutes />}>
+            <PrivateRoutes />
+        </RenderIf>
+    )
 }
 export default Routes
