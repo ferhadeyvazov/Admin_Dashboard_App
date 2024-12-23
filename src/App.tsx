@@ -6,6 +6,7 @@ import { useAppSelector } from './redux/Store'
 
 import Routes from './components/routes/Routes'
 import { themeSettings } from './redux/reducer/theme/theme'
+import Topbar from './scenes/global/Topbar'
 
 
 const App:React.FC = () => {
@@ -15,8 +16,8 @@ const App:React.FC = () => {
   return (
     <ThemeProvider theme={useMode}>
       <CssBaseline />
+      <Topbar />
       <Routes />
-
     </ThemeProvider>
   )
 }

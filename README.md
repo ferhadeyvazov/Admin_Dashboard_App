@@ -13,11 +13,11 @@ React+Typescript+MUI və bir çox texnologiyalarla yigilan bu sehife Admin idar�
 
 #### UI Library: [Material UI](https://mui.com/material-ui/getting-started/installation/)
 
+#### Icons: [MUI Icons](https://mui.com/material-ui/material-icons/)
+
 #### Style: [Module SCSS](https://sass-lang.com/)
 
 #### Data Table: [MUI Data Grid](https://mui.com/x/react-data-grid/getting-started/#installation)
-
-#### Icons: [MUI Icons](https://mui.com/material-ui/material-icons/)
 
 #### Router: [React Router Dom 7](https://reactrouter.com/)
 
