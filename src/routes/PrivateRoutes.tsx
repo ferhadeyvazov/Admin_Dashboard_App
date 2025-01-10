@@ -7,7 +7,7 @@ import {
     createRoutesFromElements
 } from "react-router-dom"
 // PAGES
-import Dashboard from "../../pages/dashboard/Dashboard"
+import Dashboard from "../pages/dashboard/Dashboard"
 
 const router = createBrowserRouter(
     createRoutesFromElements(

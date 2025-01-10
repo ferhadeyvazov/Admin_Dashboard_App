@@ -1,13 +1,14 @@
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 import React from 'react'
 import './App.css'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
 import { useAppSelector } from './redux/Store'
-
-import Routes from './components/routes/Routes'
 import { themeSettings } from './redux/reducer/theme/theme'
-import Topbar from './layouts/Topbar'
+import { Grid } from '@mui/material'
+// PAGES
+import Routes from './routes/Routes'
 import Sidebar from './layouts/Sidebar'
+import Topbar from './layouts/Topbar'
 
 
 const App: React.FC = () => {
@@ -17,9 +18,15 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={useMode}>
       <CssBaseline />
-      <Sidebar />
-      {/* <Topbar />
-      <Routes /> */}
+      <Grid container spacing={2}>
+        <Grid item xs={3}>
+          <Sidebar />
+        </Grid>
+        <Grid item xs={9}>
+          <Topbar />
+          <Routes />
+        </Grid>
+      </Grid>
     </ThemeProvider>
   )
 }
