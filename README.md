@@ -5,7 +5,7 @@ React+Typescript+MUI və bir çox texnologiyalarla yigilan bu sehife Admin idar�
 
 ## Technologies
 
-**Library:** [React.js](https://react.dev/)
+#### Library: [React.js](https://react.dev/)
 
 #### Superset: [Typescript](https://www.typescriptlang.org/)
 
