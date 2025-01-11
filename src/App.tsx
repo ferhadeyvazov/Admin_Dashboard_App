@@ -6,9 +6,9 @@ import { useAppSelector } from './redux/Store'
 import { themeSettings } from './redux/reducer/theme/theme'
 import { Grid } from '@mui/material'
 // PAGES
-import Routes from './routes/Routes'
 import Sidebar from './layouts/Sidebar'
 import Topbar from './layouts/Topbar'
+import Routes from './routes/Routes'
 
 
 const App: React.FC = () => {

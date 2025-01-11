@@ -14,6 +14,7 @@ import Bar from '../components/private/bar/Bar'
 import Form from '../components/private/form/Form'
 import Calendar from '../components/private/calendar/Calendar'
 import Faq from '../components/private/faq/Faq'
+
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/'>
