@@ -10,6 +10,8 @@ import {
     TimelineOutlined, MenuOutlined, MenuOpenOutlined, MapOutlined
 } from "@mui/icons-material";
 
+console.log("Sidebar");
+
 const Sidebar: React.FC = () => {
     const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
     return (

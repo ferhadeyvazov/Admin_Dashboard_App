@@ -1,8 +1,11 @@
 import React from 'react'
+import MainLayout from '../../../layouts/MainLayout'
 
-const Contacts = () => {
+const Contacts:React.FC = () => {
   return (
-    <div>Contacts</div>
+    <MainLayout>
+      <h2>Contacts</h2>
+    </MainLayout>
   )
 }
 

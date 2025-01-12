@@ -1,8 +1,11 @@
 import React from 'react'
+import MainLayout from '../../layouts/MainLayout'
 
-const Dashboard:React.FC = () => {
+const Dashboard: React.FC = () => {
   return (
-    <div>Dashboard</div>
+    <MainLayout>
+      <h2>Dashboard</h2>
+    </MainLayout>
   )
 }
 

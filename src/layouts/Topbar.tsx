@@ -14,7 +14,7 @@ const Topbar: React.FC = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const dispatch = useAppDispatch();
-    console.log(dispatch);
+    console.log("Topbar");
 
     return (
         <Box display="flex" justifyContent="space-between" p={2}>
