@@ -1,7 +1,7 @@
 import { IMode } from "./Type";
 
 export const tokens = (mode:IMode) => (
-    mode==="dark" 
+    mode==="light" 
     ?{
         grey: {
             100: "#e0e0e0",

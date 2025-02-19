@@ -8,7 +8,7 @@ import { Box, IconButton, InputBase, useTheme } from '@mui/material';
 import React from "react";
 import { useAppDispatch } from "../redux/Store";
 import { changeMode } from "../redux/reducer/theme/ThemeSlice";
-import { tokens } from "../redux/reducer/theme/theme";
+import { tokens } from "../redux/reducer/theme/Theme";
 
 const Topbar: React.FC = () => {
     const theme = useTheme();
