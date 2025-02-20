@@ -3,10 +3,10 @@ import { ITeam } from "./type";
 export const mockDataTeam:ITeam[] = [
   {
     id: 1,
-    name: "Jon Snow",
-    email: "jonsnow@gmail.com",
-    age: 35,
-    phone: "(665)121-5454",
+    name: "Farhad Eyvazov",
+    email: "eyvazov.ferhad1997@gmail.com",
+    age: 28,
+    phone: "(994)55-563-9129",
     access: "admin",
   },
   {
