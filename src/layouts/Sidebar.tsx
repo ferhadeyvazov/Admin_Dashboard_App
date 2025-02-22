@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Sidebar as ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
-import { Avatar, Box, IconButton, Typography, useTheme } from "@mui/material"
+import { Avatar, Box, Container, IconButton, Typography, useTheme } from "@mui/material"
 import { Link } from "react-router-dom";
 // icons
 import {
@@ -22,16 +22,15 @@ const Sidebar: React.FC = () => {
     console.log(colors);
 
     return (
-        <Box>
             <ProSidebar collapsed={isCollapsed}
                 rootStyles={{
                     backgroundColor: `${colors.primary[400]} !important`,
                     height: '100vh',
-                    position: 'fixed',
+                    position: 'sticky',
                     top: 0,
-                    left: 0,
+                    // left: 0,
                     zIndex: 100,
-                    borderRight: '1px solid #e0e0e0'
+                    borderRight: `1px solid ${colors.grey[100]}`
                 }}>
                 <Menu>
                     {/* Logo and Menu Icon */}
@@ -178,7 +177,6 @@ const Sidebar: React.FC = () => {
                     </MenuItem>
                 </Menu>
             </ProSidebar>
-        </Box>
     )
 }
 

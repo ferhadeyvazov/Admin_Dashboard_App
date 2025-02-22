@@ -19,8 +19,8 @@ const Team: React.FC = () => {
           title='Manage Team'
           subtitle='Managing the team members' />
       </Box>
-      
-      <Box>
+
+      <Box mt="40px" height="75vh">
         <DataGrid
         columns={columns}
         rows={mockDataTeam}
