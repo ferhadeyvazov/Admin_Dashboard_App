@@ -3,6 +3,7 @@ import { IState } from "./Type";
 
 let initialState:IState = {
     mode: 'dark'
+
 }
 
 

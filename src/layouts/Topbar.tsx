@@ -1,24 +1,34 @@
 import {
     DarkModeOutlined,
-    LightModeOutlined, NotificationsOutlined,
+    LightModeOutlined, MenuOpenOutlined, MenuOutlined, NotificationsOutlined,
     PersonOutlined, SearchOutlined,
     SettingsOutlined
 } from '@mui/icons-material';
 import { Box, IconButton, InputBase, useTheme } from '@mui/material';
 import React from "react";
-import { useAppDispatch } from "../redux/Store";
+import { useAppDispatch, useAppSelector } from "../redux/Store";
 import { changeMode } from "../redux/reducer/theme/ThemeSlice";
+import {changeToggle} from "../redux/reducer/sidebar/SidebarSlice"
 import { tokens } from "../redux/reducer/theme/Theme";
 
 const Topbar: React.FC = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    const sidebar = useAppSelector(state=>state.sidebar);
+    const {brokenSidebar, toggleSidebar} = sidebar;
     const dispatch = useAppDispatch();
     console.log("Topbar");
 
     return (
-        <Box display="flex" justifyContent="space-between" p={2}>
-            <Box display='flex'
+        <Box display="flex" justifyContent="space-between" py={2}>
+            {
+                brokenSidebar&&(
+                <IconButton onClick={()=>dispatch(changeToggle())}>
+                        {!toggleSidebar ? <MenuOutlined /> : <MenuOpenOutlined />}
+                </IconButton>
+            )}
+            <Box
+                display='flex'
                 bgcolor={colors.primary[900]} borderRadius="3px"
             >
                 <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search..." />

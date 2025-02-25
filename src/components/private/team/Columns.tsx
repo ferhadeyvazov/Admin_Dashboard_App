@@ -41,45 +41,32 @@ const renderAccess: React.FC<AccessProps> = ({ row: { access } }) => {
 export const columns: GridColDef<(typeof mockDataTeam)[number]>[] = [{
     field: 'id',
     headerName: 'ID',
-    width: 90,
-    headerAlign: 'center',
-    align: 'center'
+    width: 90
 },
 {
     field: 'name',
     headerName: 'Name',
-    width: 180,
-    headerAlign: 'center',
-    align: 'center'
+    width: 180
 },
 {
     field: 'email',
     headerName: 'Email',
-    width: 200,
-    headerAlign: 'center',
-    align: 'center'
+    width: 200
 },
 {
     field: 'age',
     headerName: 'Age',
-    type: 'number',
-    width: 100,
-    headerAlign: 'center',
-    align: 'center'
+    width: 90
 },
 {
     field: 'phone',
     headerName: 'Phone',
-    width: 150,
-    headerAlign: 'center',
-    align: 'center'
+    width: 150
 },
 {
     field: 'access',
     headerName: 'Access Level',
     width: 150,
-    headerAlign: 'center',
-    align: 'center',
     renderCell: renderAccess
 }
 ]

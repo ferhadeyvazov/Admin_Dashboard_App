@@ -10,9 +10,9 @@ type IProps = {
 const MainLayout: React.FC<IProps> = ({ children }) => {
     return (
         <>
-            <Grid container gap={{xs: 1, md: 3}} maxWidth="1600px" marginInline="auto" border="solid red 2px" padding={0}>
+            <Grid container maxWidth="1600px" marginInline="auto" border="solid red 3px" padding={0}>
                 <Grid item border="1px solid white"
-                xs={2} md={2} lg={3}
+                xs={0} md={3}
                 sx={{
                     "& .ps-sidebar-container": {
                         scrollSnapType: 'y mandatory',
@@ -23,7 +23,9 @@ const MainLayout: React.FC<IProps> = ({ children }) => {
                 >
                     <Sidebar />
                 </Grid>
-                <Grid item xs={7} md={6} lg={7}>
+                <Grid item 
+                xs={12} md={9} border="1px solid lightgreen"
+                px={2}>
                     <Topbar />
                     {children}
                 </Grid>
