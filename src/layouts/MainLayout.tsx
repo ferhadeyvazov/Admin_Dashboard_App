@@ -1,4 +1,4 @@
-import { Container, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import React from 'react'
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
@@ -10,8 +10,8 @@ type IProps = {
 const MainLayout: React.FC<IProps> = ({ children }) => {
     return (
         <>
-            <Grid container maxWidth="1600px" marginInline="auto" border="solid red 3px" padding={0}>
-                <Grid item border="1px solid white"
+            <Grid container maxWidth="1600px" marginInline="auto" padding={0}>
+                <Grid item
                 xs={0} md={3}
                 sx={{
                     "& .ps-sidebar-container": {
@@ -24,7 +24,7 @@ const MainLayout: React.FC<IProps> = ({ children }) => {
                     <Sidebar />
                 </Grid>
                 <Grid item 
-                xs={12} md={9} border="1px solid lightgreen"
+                    xs={12} md={9}
                 px={2}>
                     <Topbar />
                     {children}
