@@ -45,17 +45,17 @@ export const columns: GridColDef<(typeof mockDataTeam)[number]>[] = [
     {
         field: 'id',
         headerName: 'ID',
-        width: 90
+        width: 70
     },
     {
         field: 'name',
         headerName: 'Name',
-        width: 180
+        width: 250
     },
     {
         field: 'email',
         headerName: 'Email',
-        width: 200
+        width: 250
     },
     {
         field: 'age',
@@ -65,12 +65,12 @@ export const columns: GridColDef<(typeof mockDataTeam)[number]>[] = [
     {
         field: 'phone',
         headerName: 'Phone',
-        width: 150
+        width: 200
     },
     {
         field: 'access',
         headerName: 'Access Level',
-        width: 150,
+        width: 200,
         renderCell: renderAccess
     }
 ]
