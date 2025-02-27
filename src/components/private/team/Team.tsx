@@ -1,14 +1,10 @@
 import React from 'react'
+import { Box, useTheme } from '@mui/material'
+import { DataGrid } from '@mui/x-data-grid'
 import MainLayout from '../../../layouts/MainLayout'
 import Title from '../../../layouts/Title'
-import { Box, gridClasses, Typography, useTheme } from '@mui/material'
-import { DataGrid } from '@mui/x-data-grid'
-import { tokens } from '../../../redux/reducer/theme/Theme'
 import { mockDataTeam } from '../../../mock/team'
-import {
-  AdminPanelSettingsOutlined,
-  SecurityOutlined
-} from '@mui/icons-material'
+import { tokens } from '../../../redux/reducer/theme/Theme'
 import { columns } from './Columns'
 
 const Team: React.FC = () => {
@@ -25,10 +21,10 @@ const Team: React.FC = () => {
 
       <Box mt="40px" height="75vh" width="100%">
         <DataGrid
-        columns={columns}
-        rows={mockDataTeam}
-        checkboxSelection
-        pageSizeOptions={[5, 10, 15, 20]}
+          columns={columns}
+          rows={mockDataTeam}
+          checkboxSelection
+          pageSizeOptions={[5, 10, 15, 20]}
           initialState={{
             pagination: {
               paginationModel: {
@@ -49,13 +45,10 @@ const Team: React.FC = () => {
             },
             "& .MuiDataGrid-footerContainer": {
               backgroundColor: colors.blueAccent[200],
-            },
-            "& .MuiDataGrid-virtualScroller": {
-              backgroundColor: colors.primary[400],
-            },
+            }
           }}
         />
-          
+
       </Box>
     </MainLayout>
   )
