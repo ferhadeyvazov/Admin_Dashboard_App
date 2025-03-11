@@ -14,6 +14,7 @@ import Bar from '../components/private/bar/Bar'
 import Form from '../components/private/form/Form'
 import Calendar from '../components/private/calendar/Calendar'
 import Faq from '../components/private/faq/Faq'
+import Invoices from '../components/private/invoices/Invoices'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
             <Route index element={<Dashboard />} />
             <Route path='team' element={<Team />} />
             <Route path='contacts' element={<Contacts />} />
+            <Route path='invoices' element={<Invoices />} />
             <Route path='bar' element={<Bar />} />
             <Route path='form' element={<Form />} />
             <Route path='calendar' element={<Calendar />} />

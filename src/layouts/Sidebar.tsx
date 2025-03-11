@@ -15,8 +15,6 @@ import { tokens } from "../redux/reducer/theme/Theme";
 import { useAppDispatch, useAppSelector } from "../redux/Store";
 import { changeCollapse, changeToggle, changeBroken } from "../redux/reducer/sidebar/SidebarSlice";
 
-console.log("Sidebar");
-
 const Sidebar: React.FC = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -24,8 +22,6 @@ const Sidebar: React.FC = () => {
     const sidebar = useAppSelector(state=>state.sidebar);
     const dispatch = useAppDispatch();
     const {collapseSidebar, toggleSidebar}= sidebar;
-    console.log(sidebar);
-    
 
     return (
         <ProSidebar collapsed={collapseSidebar}

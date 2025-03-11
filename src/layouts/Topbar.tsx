@@ -17,7 +17,6 @@ const Topbar: React.FC = () => {
     const sidebar = useAppSelector(state=>state.sidebar);
     const {brokenSidebar, toggleSidebar} = sidebar;
     const dispatch = useAppDispatch();
-    console.log("Topbar");
 
     return (
         <Box display="flex" justifyContent="space-between" py={2}>
