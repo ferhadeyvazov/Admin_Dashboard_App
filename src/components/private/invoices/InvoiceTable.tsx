@@ -13,7 +13,6 @@ const InvoiceTable:React.FC = () => {
           <DataGrid
               columns={columns}
               rows={mockDataInvoices}
-            //   slots={{ toolbar: GridToolbar }}-
               checkboxSelection
               pageSizeOptions={[5, 10, 15, 20]}
               initialState={{
