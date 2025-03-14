@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Sidebar as ProSidebar, Menu, MenuItem  } from 'react-pro-sidebar';
 import { Avatar, Box, IconButton, Typography, useTheme } from "@mui/material"
 import { Link } from "react-router-dom";
