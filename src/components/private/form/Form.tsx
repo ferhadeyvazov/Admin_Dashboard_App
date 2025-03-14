@@ -28,8 +28,9 @@ const Form: React.FC = () => {
   // }
   const submitForm: SubmitHandler<FormProperties> = (data) => {
     console.log(data)
+    reset();
   }
-  const { control, handleSubmit, formState: { errors } } = useForm<FormProperties>({
+  const { control, handleSubmit, reset, formState: { errors } } = useForm<FormProperties>({
     defaultValues: formData,
     resolver: zodResolver(formSchema)
   })
