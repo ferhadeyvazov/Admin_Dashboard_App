@@ -1,5 +1,15 @@
-import {z} from 'zod'
+import { z } from "zod";
+// FORM TYPE
+// export type FormProperties = {
+//     firstName: string;
+//     lastName: string;
+//     email: string;
+//     contactNumber: string;
+//     address1: string;
+//     address2?: string;
+// }
 
+// SCHEMA
 const phoneRegex = /(?:0|994)(?:12|51|50|55|70|77)[^\w]{0,2}[2-9][0-9]{2}[^\w]{0,2}[0-9]{2}[^\w]{0,2}[0-9]{2}/;
 
 export const formSchema = z.object({
@@ -26,5 +36,10 @@ export const formSchema = z.object({
     address1: z.string()
     .nonempty({message: "Address is required"})
     .min(2,{message:"Address is required"})
-    .max(50, {message:"Address is too long"})
-}).required()
+    .max(50, {message:"Address is too long"}),
+
+    address2: z.string()
+    .optional() //Bu optinaldi, PArametr kimi olmasini istemirsense, bu sile bilersen
+});
+
+export type UserData = z.infer<typeof formSchema>; //Yaratdigimiz Schema-nin tipini aliriq

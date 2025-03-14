@@ -52,7 +52,7 @@ const Calendar: React.FC = () => {
           p="1rem"
           borderRadius="5px"
         >
-          <Typography variant="h5">Events</Typography>
+          <Typography variant="h5" color="#FFFFFF">Events</Typography>
           <List>
             {currentEvent.map((e: any) => (
               <ListItem

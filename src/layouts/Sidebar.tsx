@@ -146,7 +146,7 @@ const Sidebar: React.FC = () => {
                     title="FAQ"
                     icon={<HelpOutlined />}
                 >
-                    <Typography variant="h6">Calendar</Typography>
+                    <Typography variant="h6">FAQ Page</Typography>
                 </MenuItem>
                 <Typography variant="h6"
                     sx={{ padding: '1rem 0 .1rem 1.5rem', color: 'grey' }}

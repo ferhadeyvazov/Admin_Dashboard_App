@@ -2,16 +2,15 @@ import React from 'react'
 import Title from '../../../layouts/Title'
 import MainLayout from '../../../layouts/MainLayout'
 import { Box, Button, FormControl, Stack, TextField, useTheme } from '@mui/material'
-import { FormProperties } from './formType'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { tokens } from '../../../redux/reducer/theme/Theme'
-import { formSchema } from './formSchema'
+import { formSchema, UserData } from './typeAndSchema'
 
 const Form: React.FC = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const formData: FormProperties = {
+  const formData: UserData = {
     firstName: '',
     lastName: '',
     email: '',
@@ -26,11 +25,11 @@ const Form: React.FC = () => {
   //   })
 
   // }
-  const submitForm: SubmitHandler<FormProperties> = (data) => {
+  const submitForm: SubmitHandler<UserData> = (data) => {
     console.log(data)
     reset();
   }
-  const { control, handleSubmit, reset, formState: { errors } } = useForm<FormProperties>({
+  const { control, handleSubmit, reset, formState: { errors } } = useForm<UserData>({
     defaultValues: formData,
     resolver: zodResolver(formSchema)
   })
@@ -153,7 +152,8 @@ const Form: React.FC = () => {
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    error={false}
+                    error={errors.address2?true:false}
+                    helperText={errors.address2?errors.address2.message:false}
                     variant="filled"
                     label='Address 2'
                     name='address2'
