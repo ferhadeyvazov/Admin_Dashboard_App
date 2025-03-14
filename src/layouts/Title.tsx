@@ -1,4 +1,4 @@
-import { Typography, useTheme } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material'
 import React from 'react'
 import { tokens } from '../redux/reducer/theme/Theme';
 
@@ -11,7 +11,7 @@ const Title: React.FC<IProps> = ({ title, subtitle }) => {
     const colors = tokens(theme.palette.mode);
 
     return (
-        <>
+        <Box my='1.25rem'>
             <Typography
                 variant='h3'
                 fontWeight="bold"
@@ -26,7 +26,7 @@ const Title: React.FC<IProps> = ({ title, subtitle }) => {
             >
                 {subtitle}
             </Typography>
-        </>
+        </Box>
     )
 }
 

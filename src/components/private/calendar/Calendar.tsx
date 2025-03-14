@@ -38,11 +38,11 @@ const Calendar: React.FC = () => {
 
   return (
     <MainLayout>
-      <Box my='1.25rem'>
-        <Title
-          title='Calendar'
-          subtitle='Full Calendar interatitive Page' />
-      </Box>
+      <Title
+        title='Calendar'
+        subtitle='Full Calendar interatitive Page'
+      />
+      
       <Box mt="40px" height="75vh" width="100%"
         display="flex" justifyContent="space-between"
       >

@@ -13,11 +13,10 @@ const Team: React.FC = () => {
 
   return (
     <MainLayout>
-      <Box my='1.25rem'>
-        <Title
-          title='Manage Team'
-          subtitle='Managing the team members' />
-      </Box>
+      <Title
+        title='Manage Team'
+        subtitle='Managing the team members'
+      />
 
       <Box mt="40px" height="75vh" width="100%">
         <DataGrid

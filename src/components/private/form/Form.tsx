@@ -34,15 +34,14 @@ const Form: React.FC = () => {
     resolver: zodResolver(formSchema)
   })
   console.log(errors);
-  
+
   return (
     <MainLayout>
       {/* TITLE */}
-      <Box my='1.25rem'>
-        <Title
-          title='Profile Form'
-          subtitle='Managing the team members' />
-      </Box>
+      <Title
+        title='Profile Form'
+        subtitle='Managing the team members'
+      />
 
       {/* FORM */}
       <Box mt="40px" height="75vh" width="100%">
@@ -71,8 +70,8 @@ const Form: React.FC = () => {
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    error={errors.firstName?true:false}
-                    helperText={errors.firstName?errors.firstName.message:false}
+                    error={errors.firstName ? true : false}
+                    helperText={errors.firstName ? errors.firstName.message : false}
                     variant="filled"
                     label='First name'
                     fullWidth
@@ -86,8 +85,8 @@ const Form: React.FC = () => {
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    error={errors.lastName?true:false}
-                    helperText={errors.lastName?errors.lastName.message:false}
+                    error={errors.lastName ? true : false}
+                    helperText={errors.lastName ? errors.lastName.message : false}
                     variant="filled"
                     label='Last name'
                     fullWidth
@@ -106,8 +105,8 @@ const Form: React.FC = () => {
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    error={errors.email?true:false}
-                    helperText={errors.email?errors.email.message:false}
+                    error={errors.email ? true : false}
+                    helperText={errors.email ? errors.email.message : false}
                     variant="filled"
                     label='Email'
                     fullWidth
@@ -121,8 +120,8 @@ const Form: React.FC = () => {
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    error={errors.contactNumber?true:false}
-                    helperText={errors.contactNumber?errors.contactNumber.message:false}
+                    error={errors.contactNumber ? true : false}
+                    helperText={errors.contactNumber ? errors.contactNumber.message : false}
                     variant="filled"
                     label='Contact number'
                     fullWidth
@@ -136,8 +135,8 @@ const Form: React.FC = () => {
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    error={errors.address1?true:false}
-                    helperText={errors.address1?errors.address1.message:false}
+                    error={errors.address1 ? true : false}
+                    helperText={errors.address1 ? errors.address1.message : false}
                     variant="filled"
                     label='Address 1'
                     name='address1'
@@ -152,8 +151,8 @@ const Form: React.FC = () => {
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    error={errors.address2?true:false}
-                    helperText={errors.address2?errors.address2.message:false}
+                    error={errors.address2 ? true : false}
+                    helperText={errors.address2 ? errors.address2.message : false}
                     variant="filled"
                     label='Address 2'
                     name='address2'
