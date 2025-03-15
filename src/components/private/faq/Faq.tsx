@@ -1,13 +1,9 @@
 import React from 'react'
 import MainLayout from '../../../layouts/MainLayout'
 import Title from '../../../layouts/Title'
-import { useTheme } from '@mui/material'
-import { tokens } from '../../../redux/reducer/theme/Theme'
 import Accordions from './Accordions'
 
 const Faq:React.FC = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   return (
     <MainLayout>
       <Title 
