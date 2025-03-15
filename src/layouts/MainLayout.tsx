@@ -12,20 +12,20 @@ const MainLayout: React.FC<IProps> = ({ children }) => {
         <>
             <Grid container maxWidth="1600px" marginInline="auto" padding={0}>
                 <Grid item
-                xs={0} md={3}
-                sx={{
-                    "& .ps-sidebar-container": {
-                        scrollSnapType: 'y mandatory',
-                        scrollbarWidth: "none",
-                        scrollBehavior : 'smooth'
-                    }
-                }}
+                    xs={0} md={3}
+                    sx={{
+                        "& .ps-sidebar-container": {
+                            scrollSnapType: 'y mandatory',
+                            scrollbarWidth: "none",
+                            scrollBehavior: 'smooth'
+                        }
+                    }}
                 >
                     <Sidebar />
                 </Grid>
-                <Grid item 
+                <Grid item
                     xs={12} md={9}
-                px={2}>
+                    px={2}>
                     <Topbar />
                     {children}
                 </Grid>
