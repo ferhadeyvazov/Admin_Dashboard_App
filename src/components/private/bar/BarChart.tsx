@@ -2,20 +2,17 @@ import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { useTheme } from '@mui/material'
 import { tokens } from '../../../redux/reducer/theme/Theme';
-import { IBarData } from '../../../mock/barData/type';
-import  barTheme  from './barTheme';
+import ChartTheme from '../../../utils/ChartTheme';
+import { mockBarData } from '../../../mock/barData'
 
-type IProps = {
-    data: IBarData[];
-}
 
-const BarChart: React.FC<IProps> = ({ data }) => {
+const BarChart: React.FC = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    const barThem = barTheme(colors);
+    const barThem = ChartTheme(colors);
     return (
         <ResponsiveBar
-            data={data}
+            data={mockBarData}
             theme={barThem}
             keys={[
                 'hot dog',

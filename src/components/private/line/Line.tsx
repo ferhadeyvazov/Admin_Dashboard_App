@@ -1,21 +1,23 @@
 import React from 'react'
-import { Box } from '@mui/material'
 import MainLayout from '../../../layouts/MainLayout'
 import Title from '../../../layouts/Title'
-import PieChart from './PieChart'
+import LineChart from './LineChart'
+import { Box } from '@mui/material'
+0
 
-const Pie: React.FC = () => {
+const Line: React.FC = () => {
     return (
         <MainLayout>
             <Title
-                title="Pie"
-                subtitle='Simple Pie Chart'
+                title='Line'
+                subtitle='Line Chart for Data Visualization'
             />
+
             <Box mt="40px" height="75vh" width="100%">
-                <PieChart />
+                <LineChart />
             </Box>
         </MainLayout>
     )
 }
 
-export default Pie
+export default Line
