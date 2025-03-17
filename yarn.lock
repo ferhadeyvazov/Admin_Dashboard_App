@@ -759,7 +759,7 @@
 
 "@nivo/geo@^0.88.0":
   version "0.88.0"
-  resolved "https://registry.npmjs.org/@nivo/geo/-/geo-0.88.0.tgz"
+  resolved "https://registry.yarnpkg.com/@nivo/geo/-/geo-0.88.0.tgz#326181c31031e20599592529ff1e477f9f1acbf8"
   integrity sha512-2RR+qEbqeZhCnSNRgk1mB9/ZxJXDMGSQP87fCsJ+P01OCiAOKMnLIDy5XbfVDt0vV75040UrTnglKcI9mAQEdA==
   dependencies:
     "@nivo/colors" "0.88.0"

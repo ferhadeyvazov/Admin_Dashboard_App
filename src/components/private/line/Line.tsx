@@ -10,11 +10,11 @@ const Line: React.FC = () => {
         <MainLayout>
             <Title
                 title='Line'
-                subtitle='Line Chart for Data Visualization'
+                subtitle='Simple Line Chart for Data Visualization'
             />
 
             <Box mt="40px" height="75vh" width="100%">
-                <LineChart />
+                <LineChart isDashboard={false} />
             </Box>
         </MainLayout>
     )

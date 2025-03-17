@@ -97,7 +97,7 @@ const ChartTheme = (colors:any) => {
         "wrapper": {},
         "container": {
             "background": "#ffffff",
-            "color": "#000000",
+            "color": colors.primary[500],
             "fontSize": 12
         }
     }

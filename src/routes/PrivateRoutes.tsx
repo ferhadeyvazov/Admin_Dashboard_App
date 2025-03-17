@@ -17,6 +17,7 @@ import Faq from '../components/private/faq/Faq'
 import Invoices from '../components/private/invoices/Invoices'
 import Pie from '../components/private/pie/Pie'
 import Line from '../components/private/line/Line'
+import Geography from '../components/private/geography/Geography'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
             <Route path='bar' element={<Bar />} />
             <Route path='pie' element={<Pie />} />
             <Route path='line' element={<Line />} />
+            <Route path='geography' element={<Geography />} />
             <Route path='*' element={<Navigate to={"/"} />} />
         </Route>
     )

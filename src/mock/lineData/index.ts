@@ -1,9 +1,12 @@
 import { ILineData } from "./type";
+import { useTheme } from "@mui/material";
+import { tokens } from "../../redux/reducer/theme/Theme";
+
 
 export const mockLineData:ILineData[] = [
   {
     id: "japan",
-    color: "Tokenden gelen reng olacaq",
+    color: tokens("dark").greenAccent[500],
     data: [
       {
         x: "plane",
@@ -57,7 +60,7 @@ export const mockLineData:ILineData[] = [
   },
   {
     id: "france",
-    color: "Tokenden gelen reng olacaq",
+    color: tokens("dark").blueAccent[300],
     data: [
       {
         x: "plane",
@@ -111,7 +114,7 @@ export const mockLineData:ILineData[] = [
   },
   {
     id: "us",
-    color: "Tokenden gelen reng olacaq",
+    color: tokens("dark").redAccent[200],
     data: [
       {
         x: "plane",
