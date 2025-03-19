@@ -10,7 +10,7 @@ const Campaign: React.FC = () => {
         <Box
             gridColumn='span 4'
             gridRow='span 2'
-            bgcolor={colors.primary[600]}
+            bgcolor={colors.primary[400]}
             p="30px"
         >
             <Typography variant='h5' fontWeight="600">Campaign</Typography>

@@ -32,8 +32,9 @@ const Sidebar: React.FC = () => {
             rootStyles={{
                 backgroundColor: `${colors.primary[400]} !important`,
                 height: '100vh',
+                position: 'fixed',
                 top: 0,
-                left: 0,
+                // left: 0,
                 zIndex: 100,
                 borderRight: `1px solid ${colors.grey[100]}`
             }}>

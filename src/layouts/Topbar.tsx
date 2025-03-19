@@ -7,9 +7,9 @@ import {
 import { Box, IconButton, InputBase, useTheme } from '@mui/material';
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../redux/Store";
-import { changeMode } from "../redux/reducer/theme/ThemeSlice";
-import {changeToggle} from "../redux/reducer/sidebar/SidebarSlice"
+import { changeToggle } from "../redux/reducer/sidebar/SidebarSlice";
 import { tokens } from "../redux/reducer/theme/Theme";
+import { changeMode } from "../redux/reducer/theme/ThemeSlice";
 
 const Topbar: React.FC = () => {
     const theme = useTheme();
@@ -28,9 +28,13 @@ const Topbar: React.FC = () => {
             )}
             <Box
                 display='flex'
-                bgcolor={colors.primary[900]} borderRadius="3px"
+                bgcolor={colors.primary[100]} borderRadius="3px"
             >
-                <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search..." />
+                <InputBase 
+                sx={{ ml: 2, flex: 1 }} 
+                placeholder="Search..." 
+                name='searchInput'
+                />
                 <IconButton type="button" sx={{ p: 1 }}>
                     <SearchOutlined />
                 </IconButton>

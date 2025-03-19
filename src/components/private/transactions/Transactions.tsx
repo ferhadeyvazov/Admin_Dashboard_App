@@ -10,7 +10,7 @@ const Transactions: React.FC = () => {
         <Box
             gridColumn="span 4"
             gridRow="span 2"
-            bgcolor={colors.primary[600]}
+            bgcolor={colors.primary[400]}
             overflow="auto"
         >
             <Box
@@ -33,6 +33,7 @@ const Transactions: React.FC = () => {
                         justifyContent='space-between'
                         alignItems='center'
                         borderBottom={`4px solid ${colors.primary[500]}`}
+                        p='0 15px'
                     >
                         <Box>
                             <Typography

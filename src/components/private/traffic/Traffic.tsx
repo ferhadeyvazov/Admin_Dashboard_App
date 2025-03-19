@@ -10,7 +10,7 @@ const Traffic: React.FC = () => {
         <Box
             gridColumn="span 4"
             gridRow="span 2"
-            bgcolor={colors.primary[600]}
+            bgcolor={colors.primary[400]}
             padding="30px"
         >
             <Typography

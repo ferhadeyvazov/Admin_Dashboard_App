@@ -11,7 +11,7 @@ const Revenue:React.FC = () => {
       <Box
           gridColumn="span 8"
           gridRow="span 2"
-          bgcolor={colors.primary[600]}
+          bgcolor={colors.primary[400]}
       >
           <Box
               mt='25px'
@@ -24,7 +24,7 @@ const Revenue:React.FC = () => {
                   <Typography
                       variant='h5'
                       fontWeight="600"
-                      color={colors.grey[900]}
+                      color="#ffffff"
                   >
                       Revenue Generated
                   </Typography>
