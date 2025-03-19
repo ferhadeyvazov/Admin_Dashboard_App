@@ -1,6 +1,6 @@
 export type ITransactions = {
     txId: string;
     user: string;
-    date: string | Date;
+    date: string;
     cost: string;
 }

@@ -1,15 +1,11 @@
-import React from 'react'
-import {
-  DownloadOutlined,
-  EmailOutlined,
-  PersonAddAlt1Outlined,
-  PointOfSaleOutlined,
-  TrafficOutlined
-} from '@mui/icons-material'
+import { DownloadOutlined } from '@mui/icons-material'
 import { Box, Button, useTheme } from '@mui/material'
+import React from 'react'
+import Revenue from '../../components/private/revenue/Revenue'
+import Statistics from '../../components/private/statistics/Statistics'
+import Transactions from '../../components/private/transactions/Transactions'
 import MainLayout from '../../layouts/MainLayout'
 import Title from '../../layouts/Title'
-import StatBox from '../../features/StatBox'
 import { tokens } from '../../redux/reducer/theme/Theme'
 
 const Dashboard: React.FC = () => {
@@ -47,69 +43,11 @@ const Dashboard: React.FC = () => {
           gap='20px'
         >
           {/* ROW - 1 */}
-          <Box gridColumn="span 3" bgcolor={colors.primary[400]} p='10px 25px'>
-            <StatBox
-            title={'12,361'}
-            subtitle={"Emails Sent"}
-            progress={0.75}
-            increase={"+14%"}
-            icon={
-              <EmailOutlined
-                sx={{ 
-                  color:colors.greenAccent[400],
-                  fontSize: '26px'
-                }}/>
-            }
-            />
-          </Box>
-
-          <Box gridColumn="span 3" bgcolor={colors.primary[400]} p='10px 25px'>
-            <StatBox
-            title={'431,225'}
-            subtitle={"Sales Obtained"}
-            progress={0.50}
-            increase={"+21%"}
-            icon={
-              <PointOfSaleOutlined
-                sx={{ 
-                  color:colors.greenAccent[400],
-                  fontSize: '26px'
-                }}/>
-            }
-            />
-          </Box>
-
-          <Box gridColumn="span 3" bgcolor={colors.primary[400]} p='10px 25px'>
-            <StatBox
-            title={'32,441'}
-            subtitle={"New Clients"}
-            progress={0.30}
-            increase={"+5%"}
-            icon={
-              <PersonAddAlt1Outlined
-                sx={{ 
-                  color:colors.greenAccent[400],
-                  fontSize: '26px'
-                }}/>
-            }
-            />
-          </Box>
-
-          <Box gridColumn="span 3" bgcolor={colors.primary[400]} p='10px 25px'>
-            <StatBox
-            title={'1,325,134'}
-            subtitle={"Traffic Received"}
-            progress={0.80}
-            increase={"+43%"}
-            icon={
-              <TrafficOutlined
-                sx={{ 
-                  color:colors.greenAccent[400],
-                  fontSize: '26px'
-                }}/>
-            }
-            />
-          </Box>
+          <Statistics />
+          {/* ROW - 2 */}
+          <Revenue />
+          <Transactions />
+          {/* ROW 3 */}
 
         </Box>
       </Box>
