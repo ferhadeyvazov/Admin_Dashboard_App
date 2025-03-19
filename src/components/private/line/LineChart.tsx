@@ -8,7 +8,7 @@ import { useTheme } from '@mui/material'
 type IProps = {
     isDashboard: boolean;
 }
-const LineChart: React.FC<IProps> = ({ isDashboard }) => {
+const LineChart: React.FC<IProps> = ({ isDashboard=false }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const pieThem = ChartTheme(colors);

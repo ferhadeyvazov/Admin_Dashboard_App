@@ -5,8 +5,11 @@ import { tokens } from '../../../redux/reducer/theme/Theme';
 import ChartTheme from '../../../utils/ChartTheme';
 import { mockBarData } from '../../../mock/barData'
 
+type IProps = {
+    isDashboard: boolean;
+}
 
-const BarChart: React.FC = () => {
+const BarChart: React.FC<IProps> = ({ isDashboard = false }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const barThem = ChartTheme(colors);
@@ -77,7 +80,7 @@ const BarChart: React.FC = () => {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'country',
+                legend: isDashboard ? undefined : 'country',
                 legendPosition: 'middle',
                 legendOffset: 32,
                 truncateTickAt: 0
@@ -86,7 +89,7 @@ const BarChart: React.FC = () => {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'food',
+                legend: isDashboard ? undefined : 'food',
                 legendPosition: 'middle',
                 legendOffset: -40,
                 truncateTickAt: 0

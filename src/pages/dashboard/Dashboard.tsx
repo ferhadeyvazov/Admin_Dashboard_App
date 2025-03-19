@@ -1,8 +1,11 @@
 import { DownloadOutlined } from '@mui/icons-material'
 import { Box, Button, useTheme } from '@mui/material'
 import React from 'react'
+import Campaign from '../../components/private/campaign/Campaign'
 import Revenue from '../../components/private/revenue/Revenue'
+import Sales from '../../components/private/sales/Sales'
 import Statistics from '../../components/private/statistics/Statistics'
+import Traffic from '../../components/private/traffic/Traffic'
 import Transactions from '../../components/private/transactions/Transactions'
 import MainLayout from '../../layouts/MainLayout'
 import Title from '../../layouts/Title'
@@ -48,7 +51,9 @@ const Dashboard: React.FC = () => {
           <Revenue />
           <Transactions />
           {/* ROW 3 */}
-
+          <Campaign />
+          <Sales />
+          <Traffic />
         </Box>
       </Box>
 
