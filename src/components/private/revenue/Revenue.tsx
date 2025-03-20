@@ -24,7 +24,7 @@ const Revenue:React.FC = () => {
                   <Typography
                       variant='h5'
                       fontWeight="600"
-                      color="#ffffff"
+                      color={colors.grey[900]}
                   >
                       Revenue Generated
                   </Typography>

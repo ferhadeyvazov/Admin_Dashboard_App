@@ -21,7 +21,7 @@ const StatBox: React.FC<IProps> = ({ title, subtitle, icon, progress, increase }
                     <Typography
                         variant='h4'
                         fontWeight="bold"
-                        color="#ffffff"
+                        color= {colors.grey[900]}
                     >
                         {title}
                     </Typography>

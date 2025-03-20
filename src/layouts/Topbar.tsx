@@ -28,7 +28,7 @@ const Topbar: React.FC = () => {
             )}
             <Box
                 display='flex'
-                bgcolor={colors.primary[100]} borderRadius="3px"
+                bgcolor={colors.primary[400]} borderRadius="3px"
             >
                 <InputBase 
                 sx={{ ml: 2, flex: 1 }} 
