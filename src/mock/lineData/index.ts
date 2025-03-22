@@ -1,5 +1,4 @@
 import { ILineData } from "./type";
-import { useTheme } from "@mui/material";
 import { tokens } from "../../redux/reducer/theme/theme";
 
 
