@@ -1,5 +1,5 @@
 import { useTheme } from "@mui/material";
-import { tokens } from "../../redux/reducer/theme/Theme";
+import { tokens } from "../../redux/reducer/theme/theme";
 import { IStatistics, IconsName } from './type';
 
 export const mockStatistics = ():IStatistics[] =>{

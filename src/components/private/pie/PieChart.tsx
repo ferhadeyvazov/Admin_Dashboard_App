@@ -1,7 +1,7 @@
 import React from 'react'
 import { ResponsivePie } from '@nivo/pie'
 import { useTheme } from '@mui/material'
-import { tokens } from '../../../redux/reducer/theme/Theme';
+import { tokens } from '../../../redux/reducer/theme/theme';
 import ChartTheme from '../../../utils/ChartTheme';
 import { mockPieData } from '../../../mock/pieData'
 

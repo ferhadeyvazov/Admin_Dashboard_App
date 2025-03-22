@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, useTheme } from '@mui/material'
-import { tokens } from '../redux/reducer/theme/Theme'
+import { tokens } from '../redux/reducer/theme/theme'
 
 type IProps = {
   progress?: number;

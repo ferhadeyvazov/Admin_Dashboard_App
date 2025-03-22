@@ -3,7 +3,7 @@ import React from 'react'
 import StatBox from '../../../features/StatBox'
 import { mockStatistics } from '../../../mock/statistics'
 import { iconsMap, IStatistics } from '../../../mock/statistics/type'
-import { tokens } from '../../../redux/reducer/theme/Theme'
+import { tokens } from '../../../redux/reducer/theme/theme'
 
 const Statistics: React.FC = () => {
     const theme = useTheme();

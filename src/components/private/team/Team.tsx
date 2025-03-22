@@ -4,7 +4,7 @@ import { DataGrid } from '@mui/x-data-grid'
 import MainLayout from '../../../layouts/MainLayout'
 import Title from '../../../layouts/Title'
 import { mockDataTeam } from '../../../mock/team'
-import { tokens } from '../../../redux/reducer/theme/Theme'
+import { tokens } from '../../../redux/reducer/theme/theme'
 import { columns } from './Columns'
 
 const Team: React.FC = () => {

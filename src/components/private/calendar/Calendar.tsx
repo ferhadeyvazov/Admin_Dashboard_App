@@ -8,7 +8,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import { Box, useTheme, Typography, List, ListItem, ListItemText } from '@mui/material'
-import { tokens } from '../../../redux/reducer/theme/Theme'
+import { tokens } from '../../../redux/reducer/theme/theme'
 const Calendar: React.FC = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -42,7 +42,7 @@ const Calendar: React.FC = () => {
         title='Calendar'
         subtitle='Full Calendar interatitive Page'
       />
-      
+
       <Box mt="40px" height="75vh" width="100%"
         display="flex" justifyContent="space-between"
       >

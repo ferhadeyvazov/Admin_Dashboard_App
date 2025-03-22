@@ -3,7 +3,7 @@ import React from 'react'
 import { mockDataContacts } from '../../../mock/contacts'
 import { columns } from './Columns'
 import { useTheme } from '@mui/material'
-import { tokens } from '../../../redux/reducer/theme/Theme'
+import { tokens } from '../../../redux/reducer/theme/theme'
 
 const DataTable: React.FC = () => {
     const theme = useTheme();

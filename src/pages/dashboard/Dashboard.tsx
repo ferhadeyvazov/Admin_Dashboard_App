@@ -9,7 +9,7 @@ import Traffic from '../../components/private/traffic/Traffic'
 import Transactions from '../../components/private/transactions/Transactions'
 import MainLayout from '../../layouts/MainLayout'
 import Title from '../../layouts/Title'
-import { tokens } from '../../redux/reducer/theme/Theme'
+import { tokens } from '../../redux/reducer/theme/theme'
 
 const Dashboard: React.FC = () => {
   const theme = useTheme();

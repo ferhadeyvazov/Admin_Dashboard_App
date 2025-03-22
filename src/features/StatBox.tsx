@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, useTheme, Typography } from '@mui/material'
-import { tokens } from '../redux/reducer/theme/Theme'
+import { tokens } from '../redux/reducer/theme/theme'
 import ProgressCircle from './ProgressCircle'
 
 type IProps = {
@@ -21,7 +21,7 @@ const StatBox: React.FC<IProps> = ({ title, subtitle, icon, progress, increase }
                     <Typography
                         variant='h4'
                         fontWeight="bold"
-                        color= {colors.grey[900]}
+                        color={colors.grey[900]}
                     >
                         {title}
                     </Typography>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Sidebar as ProSidebar, Menu, MenuItem  } from 'react-pro-sidebar';
+import { Sidebar as ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { Avatar, Box, IconButton, Typography, useTheme } from "@mui/material"
 import { Link } from "react-router-dom";
 // icons
@@ -11,24 +11,24 @@ import {
     CalendarMonthOutlined
 } from "@mui/icons-material";
 import AdminImage from "../assets/img/Ferhad.png"
-import { tokens } from "../redux/reducer/theme/Theme";
+import { tokens } from "../redux/reducer/theme/theme";
 import { useAppDispatch, useAppSelector } from "../redux/Store";
 import { changeCollapse, changeToggle, changeBroken } from "../redux/reducer/sidebar/SidebarSlice";
 
 const Sidebar: React.FC = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    
-    const sidebar = useAppSelector(state=>state.sidebar);
+
+    const sidebar = useAppSelector(state => state.sidebar);
     const dispatch = useAppDispatch();
-    const {collapseSidebar, toggleSidebar}= sidebar;
+    const { collapseSidebar, toggleSidebar } = sidebar;
 
     return (
         <ProSidebar collapsed={collapseSidebar}
             toggled={toggleSidebar}
             onBackdropClick={() => dispatch(changeToggle())}
             breakPoint="md"
-            onBreakPoint={(broken:boolean) => dispatch(changeBroken(broken))}
+            onBreakPoint={(broken: boolean) => dispatch(changeBroken(broken))}
             rootStyles={{
                 backgroundColor: `${colors.primary[400]} !important`,
                 height: '100vh',
@@ -38,7 +38,7 @@ const Sidebar: React.FC = () => {
                 zIndex: 100,
                 borderRight: `1px solid ${colors.grey[100]}`
             }}>
-                
+
             <Menu>
                 {/* Logo and Menu Icon */}
                 <MenuItem>
@@ -51,12 +51,12 @@ const Sidebar: React.FC = () => {
                                 alignItems: 'center'
                             }}>
                                 <Typography variant="h5">Admin Panel</Typography>
-                                <IconButton onClick={()=>dispatch(changeCollapse())}>
+                                <IconButton onClick={() => dispatch(changeCollapse())}>
                                     {!collapseSidebar ? <MenuOpenOutlined /> : <MenuOutlined />}
                                 </IconButton>
                             </Box>
                             :
-                            <IconButton onClick={()=>dispatch(changeCollapse())}>
+                            <IconButton onClick={() => dispatch(changeCollapse())}>
                                 {!collapseSidebar ? <MenuOpenOutlined /> : <MenuOutlined />}
                             </IconButton>
                     }

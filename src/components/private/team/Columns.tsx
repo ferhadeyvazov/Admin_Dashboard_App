@@ -1,7 +1,7 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import { GridColDef } from "@mui/x-data-grid";
 import { mockDataTeam } from "../../../mock/team";
-import { tokens } from "../../../redux/reducer/theme/Theme";
+import { tokens } from "../../../redux/reducer/theme/theme";
 import { AdminPanelSettingsOutlined, LockOpenOutlined, SecurityOutlined } from "@mui/icons-material";
 
 interface AccessProps {

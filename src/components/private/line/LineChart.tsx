@@ -2,13 +2,13 @@ import React from 'react'
 import { ResponsiveLine } from '@nivo/line'
 import { mockLineData } from '../../../mock/lineData'
 import ChartTheme from '../../../utils/ChartTheme'
-import { tokens } from '../../../redux/reducer/theme/Theme'
+import { tokens } from '../../../redux/reducer/theme/theme'
 import { useTheme } from '@mui/material'
 
 type IProps = {
     isDashboard: boolean;
 }
-const LineChart: React.FC<IProps> = ({ isDashboard=false }) => {
+const LineChart: React.FC<IProps> = ({ isDashboard = false }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const pieThem = ChartTheme(colors);

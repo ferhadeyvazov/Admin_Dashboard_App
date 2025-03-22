@@ -1,8 +1,8 @@
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { useTheme } from '@mui/material'
-import { tokens } from '../../../redux/reducer/theme/Theme';
-import ChartTheme from '../../../utils/ChartTheme';
+import { tokens } from '../../../redux/reducer/theme/theme'
+import ChartTheme from '../../../utils/ChartTheme'
 import { mockBarData } from '../../../mock/barData'
 
 type IProps = {

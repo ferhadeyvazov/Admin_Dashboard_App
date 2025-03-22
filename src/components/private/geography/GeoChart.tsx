@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material'
 import { ResponsiveChoropleth } from '@nivo/geo'
 import { geoFeatures } from '../../../mock/geoFeatures'
 import { mockGeographyData } from '../../../mock/geography'
-import { tokens } from '../../../redux/reducer/theme/Theme'
+import { tokens } from '../../../redux/reducer/theme/theme'
 import ChartTheme from '../../../utils/ChartTheme'
 
 type IProps = {
@@ -25,7 +25,7 @@ const GeoChart: React.FC<IProps> = ({ isDashboard }) => {
             onMouseEnter={() => console.log("onMouseEnter")}
             onMouseLeave={() => null}
             onMouseMove={() => null}
-            onClick={()=> null}
+            onClick={() => null}
             role='undefined'
             theme={geoThem}
             data={mockGeographyData}

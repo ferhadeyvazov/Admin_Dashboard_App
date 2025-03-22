@@ -1,7 +1,7 @@
 import { Box, Typography, useTheme } from '@mui/material'
 import React from 'react'
 import BarChart from '../bar/BarChart'
-import { tokens } from '../../../redux/reducer/theme/Theme';
+import { tokens } from '../../../redux/reducer/theme/theme';
 
 const Sales: React.FC = () => {
     const theme = useTheme();

@@ -4,7 +4,7 @@ import MainLayout from '../../../layouts/MainLayout'
 import { Box, Button, FormControl, Stack, TextField, useTheme } from '@mui/material'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { tokens } from '../../../redux/reducer/theme/Theme'
+import { tokens } from '../../../redux/reducer/theme/theme'
 import { formSchema, UserData } from './typeAndSchema'
 
 const Form: React.FC = () => {

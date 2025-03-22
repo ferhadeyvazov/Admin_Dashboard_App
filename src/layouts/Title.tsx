@@ -1,6 +1,6 @@
 import { Box, Typography, useTheme } from '@mui/material'
 import React from 'react'
-import { tokens } from '../redux/reducer/theme/Theme';
+import { tokens } from '../redux/reducer/theme/theme';
 
 type IProps = {
     title: string;

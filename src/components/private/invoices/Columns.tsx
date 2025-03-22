@@ -1,17 +1,17 @@
 import { GridColDef } from "@mui/x-data-grid";
 import { mockDataInvoices } from "../../../mock/invoices";
 import { Typography, useTheme } from "@mui/material";
-import { tokens } from "../../../redux/reducer/theme/Theme";
+import { tokens } from "../../../redux/reducer/theme/theme";
 
 interface CostProps {
     row: {
         cost: string;
     }
 }
-const renderCost:React.FC<CostProps> = ({row: {cost}})=>{
+const renderCost: React.FC<CostProps> = ({ row: { cost } }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    return(
+    return (
         <Typography color={colors.greenAccent[500]}>
             {cost}
         </Typography>
