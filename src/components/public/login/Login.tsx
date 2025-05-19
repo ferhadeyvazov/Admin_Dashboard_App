@@ -21,8 +21,7 @@ const Login: React.FC = () => {
     defaultValues: loginData,
     resolver: zodResolver(loginSchema)
   })
-  console.log(errors);
-
+  
   return (
     <FormControl
       sx={{ width: "100%" }}

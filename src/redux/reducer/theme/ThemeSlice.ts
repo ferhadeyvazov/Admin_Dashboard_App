@@ -13,8 +13,6 @@ export const Theme = createSlice({
     reducers: {
         changeMode: (state:IState):void=>{
             state.mode = state.mode === "dark" ? "light" : "dark";
-            console.log(`Deyisdi ${state.mode}`);
-            
         }
     }
 
