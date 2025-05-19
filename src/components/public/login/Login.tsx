@@ -2,18 +2,18 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { FormControl, Stack, TextField } from '@mui/material'
 import React from 'react'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
-import Button from '../../../features/Button'
-import { loginSchema, LoginType } from './typeAndSchema'
 import { Link } from 'react-router-dom'
+import Button from '../../../features/Button'
+import { RootState, useAppDispatch, useAppSelector } from '../../../redux/Store'
+import { login } from '../../../redux/reducer/auth/LoginSlice'
+import { loginSchema, LoginType } from './typeAndSchema'
 
 const Login: React.FC = () => {
-
-  const loginData: LoginType = {
-    username: '',
-    password: ''
-  }
+  const loginData = useAppSelector((state: RootState) => state.login);
+ const dispatch = useAppDispatch();
+ 
   const submitLogin: SubmitHandler<LoginType> = (data) => {
-    console.log(data);
+    dispatch(login(data));
     reset();
   }
 

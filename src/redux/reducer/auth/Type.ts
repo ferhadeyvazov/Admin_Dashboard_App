@@ -4,3 +4,8 @@ export type initialType = {
     email: string;
     password: string;
 }
+
+export type initialLoginType = {
+    username: string;
+    password: string;
+}
