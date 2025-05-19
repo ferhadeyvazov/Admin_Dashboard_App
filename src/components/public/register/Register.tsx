@@ -1,28 +1,26 @@
+import { zodResolver } from '@hookform/resolvers/zod'
 import { FormControl, Stack, TextField } from '@mui/material'
 import React from 'react'
-import Button from '../../../features/Button'
-import { registerSchema, RegisterType } from "./typeAndSchema"
 import { Controller, SubmitHandler, useForm } from "react-hook-form"
-import { zodResolver } from '@hookform/resolvers/zod'
 import { Link } from 'react-router-dom'
+import Button from '../../../features/Button'
+import { RootState, useAppDispatch, useAppSelector } from '../../../redux/Store'
+import { register } from '../../../redux/reducer/auth/RegisterSlice'
+import { registerSchema, RegisterType } from "./typeAndSchema"
 
 const Register: React.FC = () => {
-  const registerData: RegisterType = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: ""
-  }
+  const registerData = useAppSelector((state: RootState) => state.register);
+  const dispatch = useAppDispatch();
 
   const { control, handleSubmit, reset, formState: { errors } } = useForm<RegisterType>({
     defaultValues: registerData,
     resolver: zodResolver(registerSchema)
   })
   const registerSubmit: SubmitHandler<RegisterType> = (data) => {
-    console.log(data);
+    dispatch(register(data));
     reset();
   }
-  console.log(errors);
+  
   return (
     <FormControl
       component="form"
