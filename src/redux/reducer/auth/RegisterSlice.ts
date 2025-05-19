@@ -17,6 +17,7 @@ export const RegisterSlice = createSlice({
             if(actions.payload){
                 state=actions.payload;
             }
+            return state;
         }
     }
 })
