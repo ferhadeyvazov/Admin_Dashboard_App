@@ -1,15 +1,13 @@
-import React from 'react'
-import Title from '../../../layouts/Title'
-import MainLayout from '../../../layouts/MainLayout'
-import { Box, Button, FormControl, Stack, TextField, useTheme } from '@mui/material'
-import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { tokens } from '../../../redux/reducer/theme/theme'
+import { Box, FormControl, Stack, TextField } from '@mui/material'
+import React from 'react'
+import { Controller, SubmitHandler, useForm } from 'react-hook-form'
+import Button from "../../../features/Button"
+import MainLayout from '../../../layouts/MainLayout'
+import Title from '../../../layouts/Title'
 import { formSchema, UserData } from './typeAndSchema'
 
 const Form: React.FC = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   const formData: UserData = {
     firstName: '',
     lastName: '',
@@ -158,21 +156,11 @@ const Form: React.FC = () => {
                     name='address2'
                     fullWidth
                   />
+                  
                 )}
               />
             </Stack>
-            <Button
-              variant='contained'
-              type='submit'
-              sx={{
-                textTransform: 'uppercase',
-                backgroundColor: colors.greenAccent[400],
-                padding: '.5rem',
-                fontSize: '.75rem',
-                fontWeight: 'bold',
-                alignSelf: 'flex-end',
-              }}
-            >
+            <Button>
               Create new user
             </Button>
           </Stack>
