@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {initialType} from "./Type"
+import sendRegister from "../../../servers/apiRegister";
 
 
 const initialState:initialType = {
@@ -16,6 +17,7 @@ export const RegisterSlice = createSlice({
         register: (state:initialType, actions:PayloadAction<initialType>)=>{
             if(actions.payload){
                 state=actions.payload;
+                sendRegister(state);
             }
             return state;
         }
