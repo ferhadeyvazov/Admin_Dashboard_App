@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {initialType} from "./Type"
-import sendRegister from "../../../servers/apiRegister";
+import sendRegister from "../../../service/apiRegister";
 
 
 const initialState:initialType = {

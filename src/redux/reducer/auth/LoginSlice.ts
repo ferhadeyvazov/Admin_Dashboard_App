@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { initialLoginType } from "./Type";
 
 const initialState:initialLoginType = {
-    username: '',
+    email: '',
     password: ''
 }
 export const LoginSlice = createSlice({

@@ -6,6 +6,6 @@ export type initialType = {
 }
 
 export type initialLoginType = {
-    username: string;
+    email: string;
     password: string;
 }

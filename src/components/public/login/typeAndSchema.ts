@@ -6,10 +6,11 @@ import { z } from "zod";
 // }
 
 export const loginSchema = z.object({
-    username: z.string()
-    .nonempty({message: "Username boş ola bilmez"})
-    .min(2, {message: "Username çox qısadır"})
-    .max(20, {message: "Username çox uzundur"}),
+    email: z.string()
+    .nonempty({message: "email boş ola bilmez"})
+    .min(2, {message: "email çox qısadır"})
+    .max(20, {message: "email çox uzundur"})
+    .email({message: "Email düzgün daxil edin"}),
 
     password: z.string()
     .nonempty({message: "Şifrə boş ola bilməz"})

@@ -31,15 +31,15 @@ const Login: React.FC = () => {
       <Stack spacing={2}>
         <Controller
           control={control}
-          name="username"
+          name="email"
           rules={{ required: true }}
           render={({ field }) => (
             <TextField
               {...field}
               variant='filled'
-              label="Username"
-              error={errors.username ? true : false}
-              helperText={errors.username ? errors.username.message : false}
+              label="Email"
+              error={errors.email ? true : false}
+              helperText={errors.email ? errors.email.message : false}
             />
           )}
         />
