@@ -4,7 +4,7 @@ async function sendRegister(registerData:initialType) {
     try {
         console.log(`Sorğunu aldim`);
         
-        const response = await fetch("http://localhost:8000/api/auth/register",{
+        const response = await fetch("/api/api/auth/register",{
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json'
