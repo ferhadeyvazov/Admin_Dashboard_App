@@ -1,6 +1,6 @@
-import { initialType } from "../redux/reducer/auth/Type";
+import { initialType } from "../utils/Constans";
 
-async function sendRegister(registerData:initialType) {
+async function sendRegister(registerData:initialType):Promise<void> {
     try {
         console.log(`Sorğunu aldim`);
         

@@ -5,7 +5,7 @@ import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import Button from '../../../features/Button'
 import { RootState, useAppDispatch, useAppSelector } from '../../../redux/Store'
-import { login } from '../../../redux/reducer/auth/LoginSlice'
+import { loginUser } from '../../../redux/reducer/auth/LoginSlice'
 import { loginSchema, LoginType } from './typeAndSchema'
 
 const Login: React.FC = () => {
@@ -13,7 +13,7 @@ const Login: React.FC = () => {
  const dispatch = useAppDispatch();
  
   const submitLogin: SubmitHandler<LoginType> = (data) => {
-    dispatch(login(data));
+    dispatch(loginUser(data));
     reset();
   }
 

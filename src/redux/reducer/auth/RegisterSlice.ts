@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import {initialType} from "./Type"
+import {initialType} from "../../../utils/Constans"
 import sendRegister from "../../../service/apiRegister";
 
 
