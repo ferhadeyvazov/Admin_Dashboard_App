@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import {
     Navigate,
     Route,
@@ -6,33 +6,34 @@ import {
     createBrowserRouter,
     createRoutesFromElements
 } from "react-router-dom"
+import Loading from '../features/Loading';
 // PAGES
-import Dashboard from "../pages/dashboard/Dashboard"
-import Team from '../components/private/team/Team'
-import Contacts from '../components/private/contacts/Contacts'
-import Bar from '../components/private/bar/Bar'
-import Form from '../components/private/form/Form'
-import Calendar from '../components/private/calendar/Calendar'
-import Faq from '../components/private/faq/Faq'
-import Invoices from '../components/private/invoices/Invoices'
-import Pie from '../components/private/pie/Pie'
-import Line from '../components/private/line/Line'
-import Geography from '../components/private/geography/Geography'
+const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"));
+const Team = lazy(() => import("../components/private/team/Team"));
+const Contacts = lazy(() => import("../components/private/contacts/Contacts"));
+const Bar = lazy(() => import("../components/private/bar/Bar"));
+const Form = lazy(() => import("../components/private/form/Form"));
+const Calendar = lazy(() => import("../components/private/calendar/Calendar"));
+const Faq = lazy(() => import("../components/private/faq/Faq"));
+const Invoices = lazy(() => import("../components/private/invoices/Invoices"));
+const Pie = lazy(() => import("../components/private/pie/Pie"));
+const Line = lazy(() => import("../components/private/line/Line"));
+const Geography = lazy(() => import("../components/private/geography/Geography"));
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/'>
-            <Route index element={<Dashboard />} />
-            <Route path='team' element={<Team />} />
-            <Route path='contacts' element={<Contacts />} />
-            <Route path='invoices' element={<Invoices />} />
-            <Route path='form' element={<Form />} />
-            <Route path='calendar' element={<Calendar />} />
-            <Route path='faq' element={<Faq />} />
-            <Route path='bar' element={<Bar />} />
-            <Route path='pie' element={<Pie />} />
-            <Route path='line' element={<Line />} />
-            <Route path='geography' element={<Geography />} />
+            <Route index element={<Suspense fallback={<Loading />}><Dashboard /></Suspense>} />
+            <Route path='team' element={<Suspense fallback={<Loading />}><Team /></Suspense>} />
+            <Route path='contacts' element={<Suspense fallback={<Loading />}><Contacts /></Suspense>} />
+            <Route path='invoices' element={<Suspense fallback={<Loading />}><Invoices /></Suspense>} />
+            <Route path='form' element={<Suspense fallback={<Loading />}><Form /></Suspense>} />
+            <Route path='calendar' element={<Suspense fallback={<Loading />}><Calendar /></Suspense>} />
+            <Route path='faq' element={<Suspense fallback={<Loading />}><Faq /></Suspense>} />
+            <Route path='bar' element={<Suspense fallback={<Loading />}><Bar /></Suspense>} />
+            <Route path='pie' element={<Suspense fallback={<Loading />}><Pie /></Suspense>} />
+            <Route path='line' element={<Suspense fallback={<Loading />}><Line /></Suspense>} />
+            <Route path='geography' element={<Suspense fallback={<Loading />}><Geography /></Suspense>} />
             <Route path='*' element={<Navigate to={"/"} />} />
         </Route>
     )

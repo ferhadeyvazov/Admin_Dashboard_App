@@ -2,26 +2,34 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { FormControl, Stack, TextField } from '@mui/material'
 import React from 'react'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Button from '../../../features/Button'
 import { RootState, useAppDispatch, useAppSelector } from '../../../redux/Store'
 import { loginUser } from '../../../redux/reducer/auth/LoginSlice'
 import { loginSchema, LoginType } from './typeAndSchema'
+import Loading from '../../../features/Loading'
 
 const Login: React.FC = () => {
   const loginData = useAppSelector((state: RootState) => state.login);
- const dispatch = useAppDispatch();
- 
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
   const submitLogin: SubmitHandler<LoginType> = (data) => {
     dispatch(loginUser(data));
-    reset();
+    loginData.error && reset();
   }
 
   const { control, handleSubmit, reset, formState: { errors } } = useForm<LoginType>({
     defaultValues: loginData,
     resolver: zodResolver(loginSchema)
   })
-  
+
+  React.useEffect(() => {
+    if (loginData.status === "succeeded") {
+      navigate("/");
+    }
+  }, [loginData.status, navigate]);
+
   return (
     <FormControl
       sx={{ width: "100%" }}
@@ -38,8 +46,8 @@ const Login: React.FC = () => {
               {...field}
               variant='filled'
               label="Email"
-              error={errors.email ? true : false}
-              helperText={errors.email ? errors.email.message : false}
+              error={(errors.email || loginData.error) ? true : false}
+              helperText={errors.email ? errors.email.message : loginData.error ? loginData.error : false}
             />
           )}
         />
@@ -52,8 +60,8 @@ const Login: React.FC = () => {
               {...field}
               variant='filled'
               label="Password"
-              error={errors.password ? true : false}
-              helperText={errors.password ? errors.password.message : false}
+              error={(errors.password || loginData.error) ? true : false}
+              helperText={errors.password ? errors.password.message : loginData.error ? loginData.error : false}
             />
           )}
         />

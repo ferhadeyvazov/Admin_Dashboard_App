@@ -1,23 +1,24 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { initialLoginType } from "../../../utils/Constans";
 import apiLogin from "../../../service/apiLogin";
+import { initialLoginType } from "../../../utils/Constans";
 
 const initialState: initialLoginType = {
     email: '',
     password: '',
-    status: "idle"
+    status: "idle",
+    error: null
 }
 
 export const loginUser = createAsyncThunk(
     "login/loginUser",
-    async (userData: initialLoginType, thunkAPI) => {
+    async (userData: initialLoginType, GetThunkAPI) => {
         try {
             const response = await apiLogin(userData);
             return response;
         }
         catch (err: any) {
-            console.error(`TRY-da yaradilan error Budur=>: `, err);
-            return thunkAPI.rejectWithValue(err.response?.data || "Bir xeta var")
+            console.log(err.message);
+            return GetThunkAPI.rejectWithValue(err.message || "Bir xeta var")
         }
     }
 )
@@ -35,16 +36,19 @@ export const LoginSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(loginUser.pending, (state) => {
+                state.status = "pending";
                 console.log(`Fetch yüklenir...`);
-                state.status="pending";
             })
             .addCase(loginUser.fulfilled, (state, action) => {
-                state.status="succeeded";
+                state.status = "succeeded";
                 console.log("Giris basarili: ", action.payload);
             })
             .addCase(loginUser.rejected, (state, action) => {
-                state.status="failed";
-                console.error("Giris Olmadi: ", action.payload);
+                state.status = "failed";
+                let errorMessage = action.payload;
+                console.log(errorMessage);
+                state.error = errorMessage;
+                console.error("Giris Olmadi: ", errorMessage);
             })
     }
 })

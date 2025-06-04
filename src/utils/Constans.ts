@@ -8,4 +8,8 @@ export type initialType = {
 export type loginType = Omit<initialType, "firstName" | "lastName">;
 
 type loadingType = 'idle' | 'pending' | 'succeeded' | 'failed';
-export type initialLoginType = loginType & { status?: loadingType }
+
+export type initialLoginType =
+    loginType &
+    { status?: loadingType } &
+    { error?: any }

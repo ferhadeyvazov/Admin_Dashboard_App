@@ -15,14 +15,15 @@ async function sendLogin(loginData: initialLoginType) : Promise<void> {
     console.log(result);
     if (!response.ok) {
       alert(result.message);
-      throw new Error(`${response.statusText}-Düzgün Fetch olunmadi!`);
+      console.log(result)
+      throw new Error(result.message);
     }
 
     return result;
 
   }
   catch (err) {
-    console.error(`apiLogin Erroru `,err);
+    console.error(err);
     throw err;
   }
 }
